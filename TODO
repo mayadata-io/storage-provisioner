@@ -1,0 +1,39 @@
+
+### NOTES
+
+Spec == What you want == Desire == Can change
+Annotations == How to get to your desired state == Rarely change
+Label == Mark == Category == A combination != Not a placeholder of Values == Never change
+
+### Immediate Actions
+- Test Manually
+- Update docs with sample yamls
+- Changes to stor are not reflected - Reconcile is not working
+
+
+- Add finalizer:
+    - storageprovisioner.ddp.mayadata.io/storage-protection to PVC
+    - storageprovisioner.ddp.mayadata.io/pvc-protection to VA
+
+- Reconcile should return (bool, error) where bool indicates a re-queue
+
+
+### Next Actions
+- Errors should result into Events
+- Errors should be pushed into status either 
+1/ as conditions or
+2/ set of errors or 
+3/ an error 
+
+- Main controller should have a registry of reconcilers; where each reconciler is
+ responsible for a single reconciliation. There can be multiple reconcilers based on
+ same apiVersion & kind.
+
+- Replace Storage API with BDC API
+- Need to think about how to include BDC API into this project
+
+- Automated Test
+- Make use of Metac
+
+### References
+- https://github.com/kubernetes/community/blob/master/contributors/design-proposals/storage/container-storage-interface.md

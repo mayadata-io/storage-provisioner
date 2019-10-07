@@ -1,0 +1,14 @@
+---
+apiVersion: ddp.mayadata.io/v1alpha1
+kind: Storage
+metadata:
+  name: magic-stor
+  namespace: default
+  annotations:
+    storageprovisioner.ddp.mayadata.io/storageclass-name: csi-gce-pd
+    storageprovisioner.ddp.mayadata.io/csi-attacher-name: pd.csi.storage.gke.io
+spec:
+  # provide appropriate value
+  capacity: 4Gi
+  # replace the node name with the node of your cluster
+  nodeName: gke-amitd-ddp-default-pool-d5aa3f95-t8p1

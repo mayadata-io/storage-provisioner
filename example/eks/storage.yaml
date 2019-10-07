@@ -1,0 +1,14 @@
+---
+apiVersion: ddp.mayadata.io/v1alpha1
+kind: Storage
+metadata:
+  name: magic-aws-stor
+  namespace: default
+  annotations:
+    storageprovisioner.ddp.mayadata.io/storageclass-name: ebs-sc
+    storageprovisioner.ddp.mayadata.io/csi-attacher-name: ebs.csi.aws.com
+spec:
+  # provide appropriate value
+  capacity: 3Gi
+  # replace the node name with the node of your cluster
+  nodeName: ip-192-168-9-76.us-east-2.compute.internal

@@ -1,0 +1,7 @@
+# This YAML file demonstrates the namespace to use for stotage
+# provisioner.
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ddp
