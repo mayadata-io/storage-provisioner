@@ -20,7 +20,7 @@ import (
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 
-	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/ddp/v1alpha1"
+	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/dao/v1alpha1"
 )
 
 const (

@@ -31,8 +31,8 @@ import (
 	"k8s.io/client-go/util/workqueue"
 
 	ddpinformers "github.com/mayadata-io/storage-provisioner/client/generated/informer/externalversions"
-	ddplisters "github.com/mayadata-io/storage-provisioner/client/generated/lister/ddp/v1alpha1"
-	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/ddp/v1alpha1"
+	ddplisters "github.com/mayadata-io/storage-provisioner/client/generated/lister/dao/v1alpha1"
+	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/dao/v1alpha1"
 )
 
 const (
@@ -119,7 +119,7 @@ func (ctrl *Controller) Init() error {
 		return errors.Errorf("%s: Init failed: Nil pvc queue", ctrl)
 	}
 
-	storageInformer := ctrl.DDPInformerFactory.Ddp().V1alpha1().Storages()
+	storageInformer := ctrl.DDPInformerFactory.Dao().V1alpha1().Storages()
 	pvcInformer := ctrl.InformerFactory.Core().V1().PersistentVolumeClaims()
 
 	storageInformer.Informer().AddEventHandler(cache.ResourceEventHandlerFuncs{

@@ -1,6 +1,6 @@
 PROJECT_ROOT := github.com/mayadata-io/storage-provisioner
 PKG          := $(PROJECT_ROOT)/pkg
-API_GROUPS   := ddp/v1alpha1
+API_GROUPS   := dao/v1alpha1
 
 PACKAGE_VERSION ?= $(shell git describe --always --tags)
 REGISTRY ?= quay.io/mayadata

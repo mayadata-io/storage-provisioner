@@ -30,7 +30,7 @@ import (
 	ref "k8s.io/client-go/tools/reference"
 	"k8s.io/klog"
 
-	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/ddp/v1alpha1"
+	ddp "github.com/mayadata-io/storage-provisioner/pkg/apis/dao/v1alpha1"
 )
 
 // Reconciler manages reconciling storage API

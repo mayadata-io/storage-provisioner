@@ -3,10 +3,10 @@ apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
-  name: storages.ddp.mayadata.io
+  name: storages.dao.mayadata.io
 spec:
   # group name to use for REST API: /apis/<group>/<version>
-  group: ddp.mayadata.io
+  group: dao.mayadata.io
   # version name to use for REST API: /apis/<group>/<version>
   version: v1alpha1
   # either Namespaced or Cluster
