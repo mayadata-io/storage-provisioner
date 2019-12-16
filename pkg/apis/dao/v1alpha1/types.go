@@ -112,7 +112,7 @@ type StorageCondition struct {
 
 	// Last time we probed the condition.
 	// +optional
-	LastProbeTime metav1.Time `json:"lastProbeTime,omitempty" protobuf:"bytes,3,opt,name=lastProbeTime"`
+	LastObservedTime metav1.Time `json:"lastObservedTime,omitempty" protobuf:"bytes,3,opt,name=lastObservedTime"`
 
 	// Last time the condition transitioned from one status to another.
 	// +optional
