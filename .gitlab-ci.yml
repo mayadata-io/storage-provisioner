@@ -17,8 +17,6 @@ build-image:
 cleanup:
   when: always
   stage: cleanup
-  only:
-    - add-gitlab-build
   script:
      - docker images
      - docker image prune -a --force
