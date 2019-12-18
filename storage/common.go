@@ -28,15 +28,15 @@ const (
 	// storageclass is the provider of storage.
 	//
 	// This key is expected to be present in API annotations
-	storageclassProviderKey string = "storageprovisioner.ddp.mayadata.io/storageclass-name"
+	storageclassProviderKey string = "storageprovisioner.dao.mayadata.io/storageclass-name"
 
 	// storageCSIAttacherKey holds the name of the CSI attacher that will
 	// be responsible to attach the storage
-	storageCSIAttacherKey string = "storageprovisioner.ddp.mayadata.io/csi-attacher-name"
+	storageCSIAttacherKey string = "storageprovisioner.dao.mayadata.io/csi-attacher-name"
 
 	// nodeNameKey holds the name of node where storage should
 	// get attached
-	nodeNameKey string = "storageprovisioner.ddp.mayadata.io/node-name"
+	nodeNameKey string = "storageprovisioner.dao.mayadata.io/node-name"
 )
 
 // boolPtr returns a pointer to a bool
