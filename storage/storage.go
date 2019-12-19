@@ -216,6 +216,7 @@ func (r *Reconciler) newPVC() *v1.PersistentVolumeClaim {
 			Annotations: map[string]string{
 				nodeNameKey:           r.nodeName,
 				storageCSIAttacherKey: r.attacherName,
+				storageUIDKey:         string(r.storageRef.UID),
 			},
 			OwnerReferences: []metav1.OwnerReference{
 				metav1.OwnerReference{

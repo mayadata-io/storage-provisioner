@@ -24,19 +24,26 @@ import (
 )
 
 const (
+	// StorageProvisionerAnnotationNamespace is the domain used in
+	// all the annotation & label keys in this repo
+	StorageProvisionerAnnotationNamespace string = "storageprovisioner.dao.mayadata.io"
+
 	// storageclassProviderKey holds the storageclass name. Here
 	// storageclass is the provider of storage.
 	//
 	// This key is expected to be present in API annotations
-	storageclassProviderKey string = "storageprovisioner.dao.mayadata.io/storageclass-name"
+	storageclassProviderKey string = StorageProvisionerAnnotationNamespace + "/storageclass-name"
 
 	// storageCSIAttacherKey holds the name of the CSI attacher that will
 	// be responsible to attach the storage
-	storageCSIAttacherKey string = "storageprovisioner.dao.mayadata.io/csi-attacher-name"
+	storageCSIAttacherKey string = StorageProvisionerAnnotationNamespace + "/csi-attacher-name"
 
 	// nodeNameKey holds the name of node where storage should
 	// get attached
-	nodeNameKey string = "storageprovisioner.dao.mayadata.io/node-name"
+	nodeNameKey string = StorageProvisionerAnnotationNamespace + "/node-name"
+
+	// storageUIDKey holds the name of the storage UID
+	storageUIDKey string = StorageProvisionerAnnotationNamespace + "/storage-uid"
 )
 
 // boolPtr returns a pointer to a bool
