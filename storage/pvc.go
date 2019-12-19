@@ -190,9 +190,8 @@ func (r *PVCReconciler) newVA() *storage.VolumeAttachment {
 
 	return &storage.VolumeAttachment{
 		ObjectMeta: metav1.ObjectMeta{
-			// since pvc name is generated in this case
-			// we can use the same name for VolumeAttachment
-			Name: r.pvcRef.Name,
+			// use PVC namespace & name as the name for VolumeAttachment
+			Name: r.pvcRef.Namespace + "-" + r.pvcRef.Name,
 			OwnerReferences: []metav1.OwnerReference{
 				metav1.OwnerReference{
 					APIVersion:         r.pvcRef.APIVersion,

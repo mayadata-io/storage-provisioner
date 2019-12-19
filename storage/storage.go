@@ -211,8 +211,8 @@ func (r *Reconciler) newPVC() *v1.PersistentVolumeClaim {
 
 	return &v1.PersistentVolumeClaim{
 		ObjectMeta: metav1.ObjectMeta{
-			GenerateName: r.storageRef.Namespace + "-" + r.storageRef.Name + "-",
-			Namespace:    r.storageRef.Namespace,
+			Name:      r.storageRef.Name,
+			Namespace: r.storageRef.Namespace,
 			Annotations: map[string]string{
 				nodeNameKey:           r.nodeName,
 				storageCSIAttacherKey: r.attacherName,
